@@ -67,7 +67,7 @@ total = 42
 Enter your solution below.
 
 ```elixir
-
+12 / 42 * 100
 ```
 
 ## Rocket Ship
@@ -93,7 +93,9 @@ mass * acceleration
 Enter your solution below.
 
 ```elixir
-
+mass = 10
+acceleration = 50
+force = mass * acceleration
 ```
 
 ## What Do You Tip?
