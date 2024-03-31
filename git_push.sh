@@ -14,7 +14,6 @@ else
   message="$1"
 fi
 
-# Rest of the script remains the same...
 git add .
 git commit -m "$message"
 git push
