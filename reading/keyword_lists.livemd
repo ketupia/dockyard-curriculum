@@ -182,6 +182,10 @@ Enter your solution below.
 
 ## Accessing A Key
 
+```elixir
+
+```
+
 We can access values in a keyword list by their associated key using square bracket `[key]` syntax where `key` is the atom key.
 
 ```elixir
@@ -218,7 +222,7 @@ evaluate as a tuple again. Remember that keyword lists are simply lists of tuple
 In the Elixir cell below, use `++` to add `[one: 1]` to `[two: 2]` to make `[one: 1, two: 2]`.
 
 ```elixir
-
+[one: 1] ++ [two: 2]
 ```
 
 Remove `[two: 2]` from `[one: 1, two: 2]` to make `[one: 1]`.
@@ -286,7 +290,8 @@ Bind `1` in the following keyword list to a variable `one`.
 Enter your solution below.
 
 ```elixir
-[one: 1, two: 2, three: 3, four: 4]
+[{:one, one} | _] = [one: 1, two: 2, three: 3, four: 4]
+one
 ```
 
 ## Further Reading
