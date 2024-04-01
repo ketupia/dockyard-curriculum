@@ -161,7 +161,8 @@ defmodule TicTacToe do
       iex> TicTacToe.at(board, {0, 2})
       "A"
   """
-  def at(board, coordinate) do
+  def at(board, {x, y}) do
+    Enum.at(board, 2 - y) |> Enum.at(x)
   end
 
   @doc """
@@ -179,7 +180,8 @@ defmodule TicTacToe do
       iex> TicTacToe.fill(board, {1, 1}, "O")
       [[nil, nil, nil], [nil, "O", nil], [nil, nil, nil]]
   """
-  def fill(board, coordinate, symbol) do
+  def fill(board, {x, y}, symbol) do
+    List.update_at(board, 2 - y, &List.replace_at(&1, x, symbol))
   end
 end
 ```
