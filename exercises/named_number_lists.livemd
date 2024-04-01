@@ -87,7 +87,23 @@ flowchart
 Enter your solution below.
 
 ```elixir
+defmodule NamedNumber do
+  def name(0), do: "zero"
+  def name(1), do: "one"
+  def name(2), do: "two"
+  def name(3), do: "three"
+  def name(4), do: "four"
+  def name(5), do: "five"
+  def name(6), do: "six"
+  def name(7), do: "seven"
+  def name(8), do: "eight"
+  def name(9), do: "nine"
 
+  def name([]), do: []
+  def name([hd | tail]), do: [name(hd) | name(tail)]
+end
+
+Enum.map(1..10, fn _ -> Enum.random(1..10) end) |> NamedNumber.name()
 ```
 
 ## Commit Your Progress
