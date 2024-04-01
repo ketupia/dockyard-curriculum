@@ -182,7 +182,10 @@ end
 Enter your solution below.
 
 ```elixir
-
+defmodule Coordinate do
+  @neforce_keys [:x, :y]
+  defstruct x: nil, y:nil
+end
 ```
 
 ## Module Functions
