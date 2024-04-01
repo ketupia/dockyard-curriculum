@@ -56,7 +56,11 @@ blank3 = "code"
 Enter your solution below.
 
 ```elixir
+noun_1 = "jenius"
+noun_2 = "turnips"
+noun_3 = "beets"
 
+madlib = "A programmer is a #{noun_1} that turns #{noun_2} into #{noun_3}"
 ```
 
 ## String Interpolation Madlib
@@ -79,6 +83,26 @@ blank3 = "foobar"
 </details>
 
 Enter your solution below.
+
+```elixir
+form =
+  Kino.Control.form(
+    [
+      noun_1: Kino.Input.text("Noun 1"),
+      noun_2: Kino.Input.text("Noun 2"),
+      noun_3: Kino.Input.text("Noun 3")
+    ],
+    submit: "Submit"
+  )
+
+Kino.listen(form, fn %{
+                       data: %{noun_1: noun_1, noun_2: noun_2, noun_3: noun_3}
+                     } ->
+  IO.puts("#{noun_1} and #{noun_2} combined makes #{noun_3}.")
+end)
+
+form
+```
 
 ```elixir
 
