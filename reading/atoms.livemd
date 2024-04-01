@@ -151,7 +151,7 @@ false === :false
 In the Elixir cell below, use `===` to check if `nil` is equal to `:nil`.
 
 ```elixir
-
+nil == nil
 ```
 
 Check if `true` is equal to `:true`.
