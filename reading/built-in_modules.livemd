@@ -357,7 +357,7 @@ Use the [Integer.gcd/2](https://hexdocs.pm/elixir/Integer.html#gcd/2) function t
 positive integer that divides both 10 and 15 evenly, so the result should be `5`.
 
 ```elixir
-
+Integer.gcd(10, 15)
 ```
 
 ## The String Module
