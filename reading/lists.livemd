@@ -153,13 +153,13 @@ break up the operations into steps using the match operator.
 In the Elixir cell below, add `[1, 2, 3]` and `[4, 5, 6]` together to make `[1, 2, 3, 4, 5, 6].`
 
 ```elixir
-
+[1, 2, 3] ++ [4, 5, 6]
 ```
 
 In the Elixir cell below, remove `[1]` from `[1, 1, 2, 3]` to make `[1, 2, 3]`
 
 ```elixir
-
+[1, 1, 2, 3] -- [1]
 ```
 
 ## Head And Tail
@@ -211,7 +211,7 @@ list = [2, 3]
 In the Elixir cell below, prepend `"hello"` to the list `["world"]` to make `["hello", "world"]`
 
 ```elixir
-
+["hello" | ["world"]]
 ```
 
 ## Pattern Matching Lists
@@ -220,6 +220,7 @@ We can pattern match on lists to bind elements in the list to variables.
 
 ```elixir
 [one, two] = [1, 2]
+one
 ```
 
 This poses an issue for lists though who seem to require a match for every element.
@@ -284,7 +285,8 @@ Bind `1` in the following list to a variable `a` using pattern matching.
 Enter your solution below.
 
 ```elixir
-[1, 2, 3]
+[a | _] = [1, 2, 3]
+a
 ```
 
 Bind `1` in the following list to a variable `a` using pattern matching.
