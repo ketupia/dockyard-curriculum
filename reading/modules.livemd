@@ -318,7 +318,13 @@ end
 Enter your solution below.
 
 ```elixir
+defmodule Languages.Spanish do
+  def greeting do
+    "Hola"
+  end
+end
 
+Languages.Spanish.greeting()
 ```
 
 ### Nested Modules
@@ -516,7 +522,12 @@ end
 </details>
 
 ```elixir
+defmodule MyMath do
+  def add(x, y), do: x + y
+  def add(x, y, z), do: add(x, y) + z
+end
 
+MyMath.add(1, 2, 3)
 ```
 
 ## Default Arguments
