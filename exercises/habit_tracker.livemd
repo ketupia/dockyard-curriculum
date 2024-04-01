@@ -65,7 +65,9 @@ small = 5
 Enter your solution below.
 
 ```elixir
-
+small = 5
+medium = 20
+large = 30
 ```
 
 ## Small, Medium, Large
@@ -95,7 +97,7 @@ small + medium + large
 Enter your answer in the code cell below.
 
 ```elixir
-
+1 * large + medium + small
 ```
 
 ## Multiples
@@ -114,7 +116,7 @@ small * 10 + medium * 5 + large * 3
 Enter your answer below.
 
 ```elixir
-
+3 * large + 5 * medium + 10 * small
 ```
 
 ## Progress Bar
@@ -145,7 +147,7 @@ points = small + medium
 Enter your answer below.
 
 ```elixir
-
+(small + medium) * 100 / 40
 ```
 
 ## Penalties And Rewards
@@ -172,7 +174,27 @@ small * 1.6 * 3 + medium * 2 + large * 2 * 0.5
 Enter your answer below.
 
 ```elixir
+defmodule Habitica do
+  defp small(n), do: 5 * n
+  defp medium(n), do: 20 * n
+  defp large(n), do: 30 * n
 
+  defp base_score(s, m, l), do: small(s) + medium(m) + large(l)
+  defp penalty(base_score, goal) when base_score < goal, do: 0.5
+  defp penalty(_base_score, _goal), do: 1.0
+
+  defp reward(base_score, goal) when base_score >= goal, do: 1.5
+  defp reward(_base_score, _goal), do: 1.0
+
+  def score(s, m, l, goal) do
+    base = base_score(s, m, l)
+    base * penalty(base, goal) * reward(base, goal)
+  end
+end
+
+Habitica.score(3, 0, 0, 40)
+Habitica.score(0, 2, 0, 40)
+Habitica.score(0, 0, 3, 40)
 ```
 
 ## Bonus: Add Your Own Feature
