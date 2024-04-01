@@ -59,7 +59,7 @@ shopping_cart = shopping_cart ++ ["banana", "banana", "banana"]
 Enter your solution below.
 
 ```elixir
-
+((([] ++ ["g", "w", "a"]) ++ ["b", "c", "p"]) -- ["g", "w"]) ++ ["b", "b", "b"]
 ```
 
 ## Text Shopping List With Quantities
@@ -91,7 +91,9 @@ shopping_cart = shopping_cart ++ [candies: 5]
 </details>
 
 ```elixir
-
+Keyword.get_and_update([milk: 12, eggs: 12] ++ [butter: 2, candies: 10], :butter, fn v ->
+  {v, v - 2}
+end)
 ```
 
 ## Commit Your Progress
