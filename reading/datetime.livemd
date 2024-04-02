@@ -114,7 +114,7 @@ deeply into that complexity.
 This reading is intended as a primer to working with dates, times, and timezones. You will
 need to consult the documentation and do your own research to go deeper.
 
-<!-- livebook:{"attrs":{"source":"YouTube.new(\"https://www.youtube.com/watch?v=-5wpm-gesOY\")","title":"Time and Timezones"},"chunks":null,"kind":"Elixir.HiddenCell","livebook_object":"smart_cell"} -->
+<!-- livebook:{"attrs":"eyJzb3VyY2UiOiJZb3VUdWJlLm5ldyhcImh0dHBzOi8vd3d3LnlvdXR1YmUuY29tL3dhdGNoP3Y9LTV3cG0tZ2VzT1lcIikiLCJ0aXRsZSI6IlRpbWUgYW5kIFRpbWV6b25lcyJ9","chunks":null,"kind":"Elixir.HiddenCell","livebook_object":"smart_cell"} -->
 
 ```elixir
 YouTube.new("https://www.youtube.com/watch?v=-5wpm-gesOY")
