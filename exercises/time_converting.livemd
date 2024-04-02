@@ -90,6 +90,7 @@ defmodule TimeConverter do
 
   """
   def to_seconds(amount, unit) do
+    Time.
   end
 
   @doc """
