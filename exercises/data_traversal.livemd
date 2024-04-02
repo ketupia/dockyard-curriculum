@@ -74,6 +74,7 @@ defmodule DataTraversal do
   60
   """
   def sum(keyword_list) do
+    Enum.reduce(keyword_list, 0, fn {k, v}, acc -> acc + v end)
   end
 
   @doc """
@@ -84,6 +85,9 @@ defmodule DataTraversal do
   [key1: 30, key2: 50]
   """
   def aggregate(keyword_list) do
+    Enum.reduce(keyword_list, [], fn {k, v}, acc ->
+      Keyword.update(acc, k, v, &(&1 + v))
+    end)
   end
 
   @doc """
@@ -94,6 +98,7 @@ defmodule DataTraversal do
   %{keya: "a", keyb: "b", keyc: "c2"}
   """
   def merge_maps(maps) do
+    Enum.reduce(maps, %{}, fn m, acc -> Map.merge(acc, m) end)
   end
 end
 ```
